@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>CIS213 Dice Roll!</title>
+
+
+</head>
+
+
+<body>
+
+ <h1><font face="arial" color="purple" size="6">
+ 
+<center><p>CIS213 Dice Roll!</p>
+<p>"Try Your Luck"</p></center>
+</font></h1>
+
+
+<script>
+
+function preloader()
+
+{
+var i = 0;
+
+imageObj = new Image();
+
+images = new Array();
+images[0]= "C:\Users\aermin5937\Downloads\D1.png";
+images[1]= "C:\Users\aermin5937\Downloads\D2.png";
+images[2]= "C:\Users\aermin5937\Downloads\D3.png";
+images[3]= "C:\Users\aermin5937\Downloads\D4.png";
+images[4]= "C:\Users\aermin5937\Downloads\D5.png";
+images[5]= "C:\Users\aermin5937\Downloads\D6.png";
+
+for(i = 0; i<=5; i++)
+{imageObj.src = images[i];}
+
+
+}
+
+var face0 = new Image();
+face0.src = "C:\Users\aermin5937\Downloads\D1.png";
+
+var face1 = new Image();
+face1.src = "C:\Users\aermin5937\Downloads\D2.png";
+
+var face2 = new Image();
+face2.src = "C:\Users\aermin5937\Downloads\D3.png";
+
+var face3 = new Image();
+face3.src = "C:\Users\aermin5937\Downloads\D4.png";
+
+var face4 = new Image();
+face4.src = "C:\Users\aermin5937\Downloads\D5.png";
+
+var face5 = new Image();
+face5.src = "C:\Users\aermin5937\Downloads\D6.png";
+
+</script>
+
+<img src="C:\Users\aermin5937\Downloads\D1.png" name="mydice">
+<form>
+<input type="button" value="Roll dice!" onClick="throwdice()">
+</form>
+<script>
+
+function throwdice(){
+//create a random integer between 0 and 5
+var randomdice = Math.round(Math.random()*5);
+
+document.images["mydice"].src = 'D' + randomdice + '.png'
+}
+</script>
+
+</body>
+
+</html>
